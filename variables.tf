@@ -27,7 +27,7 @@ variable "geocluster_gateway_size" {
 }
 
 variable "project_name" {
-    default = "TEST9"
+    default = "Lab"
 }
 
 variable "key_name" {
