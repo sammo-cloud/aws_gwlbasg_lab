@@ -503,6 +503,11 @@ resource "aws_route_table" "rt_ingress_gwlbe_a" {
         transit_gateway_id = aws_ec2_transit_gateway.tgw_gwlb.id
     }
 
+    route {
+        cidr_block = var.vpc_spoke_a_cidr
+        transit_gateway_id = aws_ec2_transit_gateway.tgw_gwlb.id
+    }
+	
     tags = {
         "Name" = "${var.project_name} Ingress GWLBe Subnets 1"
         "Network" = "Public"
@@ -522,6 +527,11 @@ resource "aws_route_table" "rt_ingress_gwlbe_b" {
         transit_gateway_id = aws_ec2_transit_gateway.tgw_gwlb.id
     }
 
+    route {
+        cidr_block = var.vpc_spoke_a_cidr
+        transit_gateway_id = aws_ec2_transit_gateway.tgw_gwlb.id
+    }
+	
     tags = {
         "Name" = "${var.project_name} Ingress GWLBe Subnets 2"
         "Network" = "Public"
